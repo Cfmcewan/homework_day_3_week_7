@@ -19,7 +19,7 @@ DisplayView.prototype.render = function(countryInfo) {
 
   const region = this.addElement('p', countryInfo.region);
 
-  const flag = this.createImage(countryInfo);
+  // const flag = this.createImage(countryInfo);
 
   const listTitle = this.addElement('h3', 'Languages:');
 
@@ -27,7 +27,7 @@ DisplayView.prototype.render = function(countryInfo) {
 
   container.appendChild(header);
   container.appendChild(region);
-  container.appendChild(flag);
+  // container.appendChild(flag);
   container.appendChild(listTitle);
   // container.appendChild(list);
 
@@ -40,21 +40,21 @@ DisplayView.prototype.addElement = function(type, text) {
   return element;
 
 }
-
-DisplayView.prototype.createImage = function(countryInfo) {
-  const img = document.createElement('img');
-  img.classList.add('medium-image');
-  img.scr = countryInfo.flag;
-  console.log(countryInfo.flag);
-  return img;
-  console.log(img);
-}
+//
+// DisplayView.prototype.createImage = function(countryInfo) {
+//   const img = document.createElement('img');
+//   img.classList.add('medium-image');
+//   img.scr = countryInfo.flag;
+//   console.log(countryInfo.flag);
+//   return img;
+//   console.log(img);
+// }
 //
 // DisplayView.prototype.createList(languages) {
 //   const list = document.createElement('ul');
 //   languages.forEach((language) => {
-//     const findName = language
-//     const listItem = this.addElement('li', language);
+//     const findLanguage = language.name
+//     const listItem = this.addElement('li', findLanguage);
 //     list.appendChild(listItem);
 //   });
 //   return list
